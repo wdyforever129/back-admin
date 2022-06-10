@@ -7,7 +7,7 @@
     <groupId>me.zhengjie</groupId>
     <artifactId>eladmin</artifactId>
     <packaging>pom</packaging>
-    <version>2.7</version>
+    <version>2.6</version>
 
     <modules>
         <module>eladmin-common</module>
@@ -23,7 +23,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.4</version>
+        <version>2.6.4</version>
     </parent>
 
     <properties>
@@ -33,10 +33,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
         <log4jdbc.version>1.16</log4jdbc.version>
-        <swagger.version>3.0.0</swagger.version>
-        <fastjson.version>1.2.76</fastjson.version>
-        <druid.version>1.2.6</druid.version>
-        <commons-pool2.version>2.9.0</commons-pool2.version>
+        <swagger.version>2.9.2</swagger.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <druid.version>1.2.8</druid.version>
+        <commons-pool2.version>2.11.1</commons-pool2.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
@@ -89,6 +89,7 @@
         </dependency>
 
         <!--spring boot 集成redis所需common-pool2-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
@@ -107,11 +108,13 @@
         </dependency>
 
         <!-- Swagger UI 相关 -->
+        <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/knife4j-spring-boot-starter -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>${swagger.version}</version>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>3.0.3</version>
         </dependency>
+
 
         <!--Mysql依赖包-->
         <dependency>
@@ -128,12 +131,12 @@
         </dependency>
 
         <!-- ip2region IP库 -->
+        <!-- https://mvnrepository.com/artifact/net.dreamlu/mica-ip2region -->
         <dependency>
             <groupId>net.dreamlu</groupId>
             <artifactId>mica-ip2region</artifactId>
-            <version>2.5.6</version>
+            <version>2.6.3</version>
         </dependency>
-
 
         <!--lombok插件-->
         <dependency>
@@ -146,12 +149,12 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.17</version>
+            <version>5.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>3.17</version>
+            <version>5.2.0</version>
         </dependency>
         <dependency>
             <groupId>xerces</groupId>
@@ -195,7 +198,7 @@
         <dependency>
             <groupId>nl.basjes.parse.useragent</groupId>
             <artifactId>yauaa</artifactId>
-            <version>5.23</version>
+            <version>6.11</version>
         </dependency>
     </dependencies>
 
